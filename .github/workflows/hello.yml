@@ -1,0 +1,11 @@
+name: hello
+
+on: [push]
+
+jobs:
+  jsHello:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: u0324020/actions-JS-hello@v1.0.0
+      with:
+        who-to-greet: 'Jane'
