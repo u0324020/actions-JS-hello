@@ -7,5 +7,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: u0324020/actions-JS-hello@v1.0.0
+      id: hello
       with:
         who-to-greet: 'Jane'
+      # Use the output from the `hello` step
+    - name: Get the output time
+      run: echo "The time was ${{ steps.hello.outputs.time }}"
